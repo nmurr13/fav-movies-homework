@@ -1,14 +1,13 @@
 import Movie from "./Movie"
 // the component function
-// const Movies = (props) => {
+const Movies = (props) => {
 
-//     //The Components Returned JSX
-//     return <div className="Movies"> <Movie /></div>
-// }
-
-const Mapper= (props) => {
-    const Movies = [1,2,3,4,5,6]
-    return (<div> {Movies.map(value => <h1>{value}</h1>)}</div>)
+  //The Components Returned JSX
+  return ( <div className="Movies">
+    {props.movies.map(value => (
+      <Movie name = {value.name} year = {value.year} rating = {value.rating}  />
+    ))}
+    </div>)
   }
 
 // export the component
